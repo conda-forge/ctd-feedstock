@@ -1,7 +1,7 @@
 About ctd
 =========
 
-Home: http://pypi.python.org/pypi/ctd/
+Home: https://github.com/pyoceans/python-ctd
 
 Package license: MIT
 
@@ -31,7 +31,6 @@ It is possible to list all of the versions of `ctd` available on your platform w
 ```
 conda search ctd --channel conda-forge
 ```
-
 
 
 About conda-forge

@@ -1,39 +1,39 @@
 {% set version = "0.2.2" %}
 
 package:
-    name: ctd
-    version: {{ version }}
+  name: ctd
+  version: {{ version }}
 
 source:
-    fn: ctd-{{ version }}.tar.gz
-    url: https://github.com/pyoceans/python-ctd/releases/download/v{{ version }}/ctd-{{ version }}.tar.gz
-    sha256: f99ccda7d374a5f6707e2e8a947976c40bc0ebf42dbc788c1489f25c785314f4
+  fn: ctd-{{ version }}.tar.gz
+  url: https://github.com/pyoceans/python-ctd/releases/download/v{{ version }}/ctd-{{ version }}.tar.gz
+  sha256: f99ccda7d374a5f6707e2e8a947976c40bc0ebf42dbc788c1489f25c785314f4
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-    build:
-        - python
-        - setuptools
-    run:
-        - python
-        - numpy
-        - scipy
-        - matplotlib
-        - pandas
-        - gsw
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - numpy
+    - scipy
+    - matplotlib
+    - pandas
+    - gsw
 
 test:
-    imports:
-        - ctd
+  imports:
+    - ctd
 
 about:
-    home: http://pypi.python.org/pypi/ctd/
-    license: MIT
-    summary: 'Tools to load hydrographic data formats as pandas DataFrames.'
+  home: https://github.com/pyoceans/python-ctd
+  license: MIT
+  summary: 'Tools to load hydrographic data formats as pandas DataFrames.'
 
 extra:
-    recipe-maintainers:
-        - ocefpaf
+  recipe-maintainers:
+    - ocefpaf
