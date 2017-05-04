@@ -1,4 +1,4 @@
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 
 package:
   name: ctd
@@ -6,8 +6,8 @@ package:
 
 source:
   fn: ctd-{{ version }}.tar.gz
-  url: https://github.com/pyoceans/python-ctd/releases/download/v{{ version }}/ctd-{{ version }}.tar.gz
-  sha256: f99ccda7d374a5f6707e2e8a947976c40bc0ebf42dbc788c1489f25c785314f4
+  url: https://pypi.io/packages/source/c/ctd/ctd-{{ version }}.tar.gz
+  sha256: c5144bf2200cd366fabacdd3c4dbe6cfd234a57beaf1aa221b159f5462bc4677
 
 build:
   number: 0
@@ -31,7 +31,8 @@ test:
 
 about:
   home: https://github.com/pyoceans/python-ctd
-  license: MIT
+  license: BSD 3-Clause
+  license_file: LICENSE.txt
   summary: 'Tools to load hydrographic data formats as pandas DataFrames.'
 
 extra:
