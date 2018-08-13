@@ -1,24 +1,22 @@
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: ctd
   version: {{ version }}
 
 source:
-  fn: ctd-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/c/ctd/ctd-{{ version }}.tar.gz
-  sha256: c5144bf2200cd366fabacdd3c4dbe6cfd234a57beaf1aa221b159f5462bc4677
+  sha256: b0266eea464c4a993c49b6558cc3ed3a16ec4ad2766305b0a8cf42aec9354a71
 
 build:
+  number: 0
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
-    - pip
     - python
-    - setuptools
+    - pip
   run:
     - python
     - numpy
