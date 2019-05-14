@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: ctd
@@ -6,24 +6,26 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/ctd/ctd-{{ version }}.tar.gz
-  sha256: b0266eea464c4a993c49b6558cc3ed3a16ec4ad2766305b0a8cf42aec9354a71
+  sha256: c354b87d0ba4af2b39105ce1f2e91339da5d2bf2a869b8f74da6be5dab3dbaec
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python >=3
     - pip
   run:
-    - python
-    - numpy
-    - scipy
+    - python >=3
+    - gsw >=3.3.0
     - matplotlib
-    - pandas
-    - gsw
+    - numpy
+    - pandas-flavor
+    - pandas >=0.24.0
+    - scipy
+
 
 test:
   imports:
@@ -31,9 +33,9 @@ test:
 
 about:
   home: https://github.com/pyoceans/python-ctd
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.txt
-  summary: 'Tools to load hydrographic data formats as pandas DataFrames.'
+  summary: 'Tools to load hydrographic data formats as pandas DataFrames'
 
 extra:
   recipe-maintainers:
