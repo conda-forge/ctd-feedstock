@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
@@ -19,11 +19,13 @@ requirements:
     - pip
   run:
     - python
-    - numpy
-    - scipy
+    - gsw >=3.3.0
     - matplotlib
-    - pandas
-    - gsw
+    - numpy
+    - pandas-flavor
+    - pandas >=0.24.0
+    - scipy
+
 
 test:
   imports:
@@ -31,9 +33,9 @@ test:
 
 about:
   home: https://github.com/pyoceans/python-ctd
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.txt
-  summary: 'Tools to load hydrographic data formats as pandas DataFrames.'
+  summary: 'Tools to load hydrographic data formats as pandas DataFrames'
 
 extra:
   recipe-maintainers:
