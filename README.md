@@ -3,11 +3,11 @@ About ctd
 
 Home: https://github.com/pyoceans/python-ctd
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: Tools to load hydrographic data formats as pandas DataFrames.
+Summary: Tools to load hydrographic data formats as pandas DataFrames
 
 
 
