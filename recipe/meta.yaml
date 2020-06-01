@@ -30,6 +30,10 @@ requirements:
 test:
   imports:
     - ctd
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/pyoceans/python-ctd
