@@ -1,22 +1,25 @@
-{% set version = "1.1.1" %}
+{% set version = "1.3.0" %}
 
 package:
   name: ctd
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/c/ctd/ctd-{{ version }}.tar.gz
-  sha256: 0605bbbd182c8e3aaba8487559c8a1f0fc125738e38943678aaf3448326df011
+  url: https://github.com/pyoceans/python-ctd/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: d1dcfed5f5eb54cac6797177bc3cfc81b78e7774e1eb3afee0bb5a8256c3d470
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script:
+    - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python >=3
     - pip
+    - setuptools-scm
   run:
     - python >=3
     - gsw >=3.3.0
