@@ -1,4 +1,4 @@
-{% set version = "1.3.0" %}
+{% set version = "1.4.0" %}
 
 package:
   name: ctd
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pyoceans/python-ctd/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d1dcfed5f5eb54cac6797177bc3cfc81b78e7774e1eb3afee0bb5a8256c3d470
+  sha256: 24a59dde5a540bda33b98c519d7159b6cc99611041cc6b7ae4dbd5bf71c060ec
 
 build:
   number: 0
