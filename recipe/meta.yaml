@@ -1,38 +1,41 @@
+{% set name = "ctd" %}
 {% set version = "1.4.0" %}
 
 package:
-  name: ctd
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/pyoceans/python-ctd/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 24a59dde5a540bda33b98c519d7159b6cc99611041cc6b7ae4dbd5bf71c060ec
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ctd-{{ version }}.tar.gz
+  sha256: e34e02320c3be571705098406dbbf47064f233d0f4806710208bb90d47006b4d
 
 build:
   number: 0
   noarch: python
-  script:
-    - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-    - {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3
+    - python >=3.6
     - pip
     - setuptools-scm
   run:
-    - python >=3
+    - python >=3.6
     - gsw >=3.3.0
     - matplotlib-base
     - numpy
-    - pandas-flavor
+    - pandas-flavor >=0.1.2
     - pandas >=0.24.0
     - scipy
-
+    - chardet
 
 test:
   imports:
     - ctd
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/pyoceans/python-ctd
