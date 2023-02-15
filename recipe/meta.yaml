@@ -17,17 +17,18 @@ build:
 requirements:
   host:
     - python >=3.6
-    - pip
+    - setuptools >=41.2
     - setuptools-scm
+    - pip
   run:
     - python >=3.6
+    - chardet
     - gsw >=3.3.0
     - matplotlib-base
     - numpy
-    - pandas-flavor >=0.1.2
     - pandas >=0.24.0
+    - pandas-flavor >=0.1.2
     - scipy
-    - chardet
 
 test:
   imports:
