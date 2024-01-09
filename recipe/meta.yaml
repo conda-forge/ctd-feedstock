@@ -1,5 +1,5 @@
 {% set name = "ctd" %}
-{% set version = "1.4.4" %}
+{% set version = "1.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ctd-{{ version }}.tar.gz
-  sha256: 84cc9b6add63d09ffe89e188d33f5c7b49e0b84a9741ef9229e403f971d9fc76
+  sha256: 69e3d7137438b0463b39dc79760997533e0ef4df712b2c9390636bfca8d7617e
 
 build:
   number: 0
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
     - setuptools >=41.2
     - setuptools-scm
     - pip
   run:
-    - python >=3.6
+    - python >=3.9
     - chardet
     - gsw >=3.3.0
     - matplotlib-base
