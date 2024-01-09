@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
     - setuptools >=41.2
     - setuptools-scm
     - pip
   run:
-    - python >=3.6
+    - python >=3.9
     - chardet
     - gsw >=3.3.0
     - matplotlib-base
