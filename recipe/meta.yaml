@@ -1,5 +1,5 @@
 {% set name = "ctd" %}
-{% set version = "1.4.5" %}
+{% set version = "1.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ctd-{{ version }}.tar.gz
-  sha256: 69e3d7137438b0463b39dc79760997533e0ef4df712b2c9390636bfca8d7617e
+  sha256: 19d2f29300added26d947740a609874588dccd57e0e48c459743bf11923ab764
 
 build:
   number: 0
