@@ -1,5 +1,5 @@
 {% set name = "ctd" %}
-{% set version = "1.4.6" %}
+{% set version = "1.4.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ctd-{{ version }}.tar.gz
-  sha256: 19d2f29300added26d947740a609874588dccd57e0e48c459743bf11923ab764
+  sha256: f499c0bb08d96c5220e54f91977a094998e83c2e8a5340539ecc823ecd6eb12e
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -25,7 +25,7 @@ requirements:
     - chardet
     - gsw >=3.3.0
     - matplotlib-base
-    - numpy
+    - numpy >=2
     - pandas >=0.24.0
     - pandas-flavor >=0.1.2
     - scipy
