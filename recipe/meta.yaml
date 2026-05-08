@@ -1,5 +1,5 @@
 {% set name = "ctd" %}
-{% set version = "1.4.7" %}
+{% set version = "1.5.0" %}
 {% set python_min = "3.11" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ctd-{{ version }}.tar.gz
-  sha256: f499c0bb08d96c5220e54f91977a094998e83c2e8a5340539ecc823ecd6eb12e
+  sha256: 09ded6c3d595282a530924ccc1d2591fdf32bcd3d949dc0cd390c95353f1827d
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - chardet
+    - chardet <7
     - gsw >=3.3.0
     - matplotlib-base
     - numpy >=2
